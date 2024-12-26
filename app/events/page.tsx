@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>Events Page</div>
+    <div>Events Page fix
+    </div>
   )
 }
