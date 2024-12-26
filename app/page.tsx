@@ -1,101 +1,100 @@
-import Image from "next/image";
+// app/page.tsx
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* Hero Section */}
+      <section className="bg-blue-50 py-20">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Discover the beauty of mathematics
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 mb-8">
+            Join our community of mathematical enthusiasts at SRM Chennai and
+            explore the fascinating world of numbers, patterns, and mathematical
+            concepts.
+          </p>
+          <div className="space-x-4">
+            <Link href="/events" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
+                Explore Events
+            </Link>
+            <Link href="/about" className="bg-gray-100 text-gray-800 px-6 py-3 rounded-md hover:bg-gray-200">
+                Join Us
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Highlights Section */}
+      <section className="py-16">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Upcoming Events
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Upcoming Events */}
+            <div className="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition">
+              <div className="text-blue-600 text-4xl mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-8 h-8 mx-auto"
+                >
+                  <path d="M6 2a1 1 0 00-1 1v1H3a2 2 0 00-2 2v2h22V6a2 2 0 00-2-2h-2V3a1 1 0 00-1-1H6zM1 10v8a2 2 0 002 2h18a2 2 0 002-2v-8H1zm7.5 4a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v3a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Upcoming Events</h3>
+              <p className="text-gray-600 mb-4">
+                Discover our exciting lineup of events happening soon.
+              </p>
+              <Link href="/events" className="text-blue-600 hover:underline">Learn More →
+              </Link>
+            </div>
+
+            {/* Card 2: About the Team */}
+            <div className="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition">
+              <div className="text-green-600 text-4xl mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-8 h-8 mx-auto"
+                >
+                  <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">About the Team</h3>
+              <p className="text-gray-600 mb-4">
+                Meet the people behind the success of our club.
+              </p>
+              <Link href="/team" className="text-blue-600 hover:underline">Meet the Team →
+              </Link>
+            </div>
+
+            {/* Card 3: Gallery */}
+            <div className="p-6 bg-white border rounded-lg shadow hover:shadow-lg transition">
+              <div className="text-purple-600 text-4xl mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-8 h-8 mx-auto"
+                >
+                  <path d="M8.5 10.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0-5.5A2.5 2.5 0 106 8 2.5 2.5 0 008.5 5zM14.5 14.5h-10l3-4 2 2.5 3-4zm6.5 4h-10v2H21z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Gallery</h3>
+              <p className="text-gray-600 mb-4">
+                Explore moments from our past events and activities.
+              </p>
+              <Link href="/gallery" className="text-blue-600 hover:underline">View Gallery →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
